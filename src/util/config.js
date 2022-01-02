@@ -1,4 +1,2 @@
 module.exports = {
-    TOKEN: '',
-    MONGOSTRING: '',
 }

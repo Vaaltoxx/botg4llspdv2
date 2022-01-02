@@ -1,6 +1,5 @@
 const { embed } = require('../util/functions');
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
-const { TOKEN, MONGOSTRING } = require('../util/config');
 const mongoose = require('mongoose');
 
 module.exports = class GotoClient extends AkairoClient {
