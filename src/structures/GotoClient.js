@@ -65,7 +65,6 @@ module.exports = class GotoClient extends AkairoClient {
         }
 
         await this.init();
-        return this.login(process.env.token)
     }
 
 }

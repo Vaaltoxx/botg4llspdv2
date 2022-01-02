@@ -4,4 +4,4 @@ let client = new GotoCLient({
     prefix: '+'
 });
 
-client.start();
+client.login(process.env.token);
