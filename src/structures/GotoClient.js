@@ -1,6 +1,5 @@
 const { embed } = require('../util/functions');
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
-const mongoose = require('mongoose');
 
 module.exports = class GotoClient extends AkairoClient {
     constructor(config = {}) {
@@ -51,20 +50,8 @@ module.exports = class GotoClient extends AkairoClient {
         console.log(`Commandes -> ${this.commandHandler.modules.size}`);
         this.listenerHandler.loadAll();
         console.log(`Listeners -> ${this.listenerHandler.modules.size}`);
+
     }
 
-    async start() {
-        try {
-            await mongoose.connect(process.env.mongostring, {
-                useNewUrlParser: true, 
-                useUnifiedTopology: true 
-            });
-            console.log("DB connectée");
-        } catch(e) {
-            console.log("DB pas connectée! \n\n", e)
-        }
-
-        await this.init();
-    }
 
 }
